@@ -5,14 +5,13 @@
 ############################################################
 
 # Use Alpine Linux
-FROM alpine:latest
+FROM tarzan79/alpine-base:latest
 
 ENV TIMEZONE Europe/Paris
 
 RUN	apk update && \
 	apk upgrade && \
 	apk add --update openssl nginx && \
-    apk add --update nano && \
 	apk add --update tzdata && \
 	cp /usr/share/zoneinfo/${TIMEZONE} /etc/localtime && \
 	echo "${TIMEZONE}" > /etc/timezone && \
