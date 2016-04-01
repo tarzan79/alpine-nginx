@@ -5,7 +5,7 @@
 ############################################################
 
 # Use Alpine Linux
-FROM tarzan79/alpine-base:arm
+FROM scaleway/alpine
 
 ENV TIMEZONE Europe/Paris
 
