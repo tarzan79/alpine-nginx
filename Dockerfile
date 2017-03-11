@@ -36,4 +36,4 @@ EXPOSE 80 443
 # Add the files
 ADD root /
 
-#CMD ["nginx"]
+CMD ["nginx"]
