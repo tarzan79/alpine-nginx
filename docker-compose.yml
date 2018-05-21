@@ -1,0 +1,20 @@
+version: "3.0"
+services:
+    nginx:
+        image: tarzan79/alpine-nginx
+        networks:
+            - front
+        ports:
+            - 80
+        volumes:
+            - site:/var/www/sites
+            - log:/var/log/nginx
+            - db:/var/lib/mysql
+        restart: always
+        command: "nginx -g 'daemon off;'"
+networks:
+    front:
+volumes:
+    site:
+    log:
+    db:

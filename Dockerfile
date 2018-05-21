@@ -30,6 +30,8 @@ RUN	apk update && \
 	rm -rf /var/cache/apk/* && \
     chown -R nginx:www-data /var/lib/nginx
 
+COPY /etc/nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf
+
 # Expose ports
 EXPOSE 80 443
 
